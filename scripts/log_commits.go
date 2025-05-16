@@ -39,5 +39,5 @@ func main() {
     os.Exit(1)
   }                         
 
-  fmt.Printf("Se ha creado el archivo de log en %s\n",logfile)                         
+  fmt.Printf("Se ha creado el archivo de log en %s\n",logFile)                         
 }
