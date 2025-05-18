@@ -14,7 +14,8 @@ func main() {
 	logDirxx := "" //  filepath.Join("..", "log")
 	logFilexx := filepath.Join(logDirxx, "commits_xx.txt")
 	contingutxx := "--CONTENT--"
-	os.WriteFile(logFilexx, []byte(contingutxx), 0644)
+	resultadoxx := os.WriteFile(logFilexx, []byte(contingutxx), 0644)
+	fmt.Printf("****Resultado de WriteFile(): %v\n", resultadoxx)
 	fmt.Printf("****fin mi test, que grabo un arch.\n")
 	// --------eea---- fin
 	
