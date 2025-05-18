@@ -10,15 +10,6 @@ import (
 
 func main() {
 	fmt.Printf("*****INICIO: log_commits.go *******\n")
-	// --------ini---- eea
-	logDirxx := "" //  filepath.Join("..", "log")
-	logFilexx := filepath.Join(logDirxx, "commits_xx.txt")
-	contingutxx := "--CONTENT--"
-	resultadoxx := os.WriteFile(logFilexx, []byte(contingutxx), 0644)
-	fmt.Printf("****Resultado de WriteFile(): %v - [%f]\n", resultadoxx, logFilexx)
-	fmt.Printf("****fin mi test, que grabo un arch.\n")
-	// --------eea---- fin
-	
 	cmd := exec.Command("git", "log", "-n", "3", "--pretty=format:%h - %an, %ar : %s")
 	out, err := cmd.Output()
 	if err != nil {
