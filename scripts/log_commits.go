@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-								  
+	fmt.Printf("*****INICIO: log_commits.go *******")								  
 	cmd := exec.Command("git", "log", "-n", "3", "--pretty=format:%h - %an, %ar : %s")
 	out, err := cmd.Output()
 	if err != nil {
