@@ -9,7 +9,16 @@ import (
 )
 
 func main() {
-	fmt.Printf("*****INICIO: log_commits.go *******")								  
+	fmt.Printf("*****INICIO: log_commits.go *******\n")
+	// --------ini---- eea
+	logDirxx := "" //  filepath.Join("..", "log")
+	logFilexx := filepath.Join(logDir, "commits_xx.txt")
+	contingutxx = "--CONTENT--"
+	errxx = os.WriteFile(logFilexx, []byte(contingutxx), 0644)
+	// --------eea---- fin
+
+	fmt.Printf("****fin mi test, que grabo un arch.\n")
+	
 	cmd := exec.Command("git", "log", "-n", "3", "--pretty=format:%h - %an, %ar : %s")
 	out, err := cmd.Output()
 	if err != nil {
@@ -17,7 +26,7 @@ func main() {
 		os.Exit(1)
 	}
 
-  // Creacio de la carpeta log
+  	// Creacio de la carpeta log
 	logDir := filepath.Join("..", "log")
 	if _, err := os.Stat(logDir); os.IsNotExist(err) {
 		//Definimos permisos de escritura
