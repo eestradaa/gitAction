@@ -12,8 +12,8 @@ func main() {
 	fmt.Printf("*****INICIO: log_commits.go *******\n")
 	// --------ini---- eea
 	logDirxx := "" //  filepath.Join("..", "log")
-	logFilexx := filepath.Join(logDir, "commits_xx.txt")
-	contingutxx = "--CONTENT--"
+	logFilexx := filepath.Join(logDirxx, "commits_xx.txt")
+	contingutxx := "--CONTENT--"
 	errxx = os.WriteFile(logFilexx, []byte(contingutxx), 0644)
 	// --------eea---- fin
 
