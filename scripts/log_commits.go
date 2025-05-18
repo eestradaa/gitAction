@@ -14,10 +14,9 @@ func main() {
 	logDirxx := "" //  filepath.Join("..", "log")
 	logFilexx := filepath.Join(logDirxx, "commits_xx.txt")
 	contingutxx := "--CONTENT--"
-	errxx = os.WriteFile(logFilexx, []byte(contingutxx), 0644)
-	// --------eea---- fin
-
+	errxx := os.WriteFile(logFilexx, []byte(contingutxx), 0644)
 	fmt.Printf("****fin mi test, que grabo un arch.\n")
+	// --------eea---- fin
 	
 	cmd := exec.Command("git", "log", "-n", "3", "--pretty=format:%h - %an, %ar : %s")
 	out, err := cmd.Output()
@@ -49,5 +48,6 @@ func main() {
 		os.Exit(1)
 	}                         
 	
-	fmt.Printf("Se ha creado el archivo de log en: %s\n", logFile)                         
+	fmt.Printf("Se ha creado el archivo de log en: %s\n", logFile)     
+	fmt.Printf("*****FIN: log_commits.go *******\n")
 }
